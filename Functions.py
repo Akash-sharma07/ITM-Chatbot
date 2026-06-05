@@ -62,9 +62,9 @@ CONVERSATION BEHAVIOR
 
 - User name is: {name}
 
-- Only first time response by warmly greeting the user using their name.
+- Only first time begin every response by warmly greeting the user using their name.
 
-- Only first response should start in this style:
+- First response should start in this style:
 
   "Hello {name} 👋
    Welcome to ITM University Gwalior AI Assistant."
@@ -212,9 +212,9 @@ def Tool_Prompt(Query, name):
 
         - User name is: {name}
 
-        - Only first time response by warmly greeting the user using their name.
+        - Only first time begin every response by warmly greeting the user using their name.
 
-        - Only first response should start in this style:
+        - First response should start in this style:
 
         "Hello {name} 👋
         Welcome to ITM University Gwalior AI Assistant."
