@@ -131,7 +131,10 @@ else:
                 st.session_state.history = []
 
             # Load API keys and other secret values from the .env file.
-            load_dotenv()
+            api_key = st.secrets.get(
+                "OPENAI_API_KEY",
+                os.getenv("OPENAI_API_KEY")
+                )
 
             # This list is currently unused because history is stored in session state.
             chat_history = []
