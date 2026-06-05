@@ -11,3 +11,4 @@ gtts
 SpeechRecognition
 streamlit-mic-recorder
 pydub
+ddgs
