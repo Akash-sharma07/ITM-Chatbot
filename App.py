@@ -1,7 +1,7 @@
 import tempfile
 from time import sleep
 from typing import TypedDict
-
+import os
 import streamlit as st
 from dotenv import load_dotenv
 from gtts import gTTS
@@ -131,7 +131,10 @@ else:
                 st.session_state.history = []
 
             # Load API keys and other secret values from the .env file.
-            load_dotenv()
+            api_key = st.secrets.get(
+                "OPENAI_API_KEY",
+                os.getenv("OPENAI_API_KEY")
+                )
 
             # This list is currently unused because history is stored in session state.
             chat_history = []
@@ -139,6 +142,7 @@ else:
             # OpenAI model used when an answer is not found in local course data.
             model = ChatOpenAI(
                 model="gpt-4o",
+                api_key = api_key,
                 temperature=0.7,
                 max_completion_tokens=1000,
             )
