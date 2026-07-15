@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-openai
+langchain-community
+langgraph
+openai
+faiss-cpu
+pypdf
+python-dotenv
+gtts
+SpeechRecognition
+streamlit-mic-recorder
+pydub
